@@ -135,7 +135,7 @@ def run_colocation(
 
     ####### Preparing data #######
     # extract cell density parameter
-    X_data = np.array(sp_data.obsm[train_args["cell_abundance_obsm"]].values)
+    X_data = np.array(sp_data.obsm[train_args["cell_abundance_obsm"]])
     var_names = sp_data.uns["mod"][train_args["factor_names"]]
     obs_names = sp_data.obs_names
     if train_args["sample_name_col"] is None:
