@@ -136,7 +136,7 @@ def run_colocation(
     ####### Preparing data #######
     # extract cell density parameter
     X_data = np.array(sp_data.obsm[train_args["cell_abundance_obsm"]])
-    var_names = sp_data.uns["mod"][train_args["factor_names"]]
+    var_names = sp_data.var_names
     obs_names = sp_data.obs_names
     if train_args["sample_name_col"] is None:
         # if slots needed to generate scanpy plots are present, use scanpy spatial slot name:
